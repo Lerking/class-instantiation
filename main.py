@@ -16,11 +16,11 @@ class Group:
         for member in self.members:
             print(f"Hello, I'm {member.name}")
             
-    def add_member(self, member :Person):
+    def add_member(self, member: Person):
         self.members.append(member)
     
-    def create_person_member(self):
-        return Person
+    def create_person_member(self, *args):
+        return self.members.append(Person(*args))
             
 if __name__ == '__main__':
     person = Person("John", 36)
@@ -32,6 +32,8 @@ if __name__ == '__main__':
     Group.print_members()
     Group.add_member(Person("Peter", 48))
     Group.print_members()
-    Group.add_member(Group.create_person_member()("Benjamin", 35))
+    Group.add_member(Person("Benjamin", 28))
+    Group.print_members()
+    Group.create_person_member("Julia", 32)
     Group.print_members()
     
