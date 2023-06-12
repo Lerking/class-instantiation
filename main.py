@@ -20,7 +20,9 @@ class Group:
         self.members.append(member)
     
     def create_person_member(self, *args):
-        return self.members.append(Person(*args))
+        self.members.append(Person(*args))
+        # Return the last member added
+        return self.members[-1]
             
 if __name__ == '__main__':
     person = Person("John", 36)
@@ -34,6 +36,7 @@ if __name__ == '__main__':
     Group.print_members()
     Group.add_member(Person("Benjamin", 28))
     Group.print_members()
-    Group.create_person_member("Julia", 32)
+    test = Group.create_person_member("Julia", 32)
     Group.print_members()
+    print(test)
     
