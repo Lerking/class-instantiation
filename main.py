@@ -24,7 +24,7 @@ class Group:
         self.members.append(Person(*args))
         # Return the last member added
         return self.members[-1]
-            
+
 if __name__ == '__main__':
     #person = Person("John", 36)
     #person.say_hello()
